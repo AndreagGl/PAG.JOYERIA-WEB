@@ -1,0 +1,306 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    /*
+    Mientras no tengamos la imagen
+    definitiva de la BD usamos fondo.
+    */
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+}
+
+
+/* ==========================================
+   CONTENIDO HERO
+========================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100% - 40px,
+        900px
+    );
+
+    margin-inline: auto;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    padding:
+        120px 0
+        60px;
+}
+
+
+.hero-subtitle {
+
+    margin-bottom: 18px;
+
+    font-size: clamp(
+        0.7rem,
+        1vw,
+        0.9rem
+    );
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.hero h1 {
+
+    margin-bottom: 24px;
+
+    font-size: clamp(
+        2.4rem,
+        6vw,
+        5.5rem
+    );
+
+    line-height: 1.05;
+
+    font-weight: 400;
+}
+
+
+.hero-description {
+
+    width: min(
+        100%,
+        600px
+    );
+
+    margin: 0 auto 35px;
+
+    font-size: clamp(
+        0.95rem,
+        1.5vw,
+        1.1rem
+    );
+
+    line-height: 1.7;
+}
+
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding:
+        0 32px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.hero-button:hover {
+
+    background: #111111;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+.categories,
+.featured {
+
+    width: min(
+        100% - 40px,
+        1400px
+    );
+
+    margin-inline: auto;
+
+    padding:
+        clamp(70px, 9vw, 130px)
+        0;
+}
+
+
+/* ==========================================
+   ENCABEZADO SECCIÓN
+========================================== */
+
+.section-header {
+
+    text-align: center;
+
+    margin-bottom:
+        clamp(35px, 5vw, 60px);
+}
+
+
+.section-subtitle {
+
+    margin-bottom: 10px;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+}
+
+
+.section-header h2 {
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.5rem
+    );
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+
+/* ==========================================
+   CATEGORÍAS
+========================================== */
+
+.categories-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+.category-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+
+.category-image {
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+}
+
+
+.category-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.category-card:hover
+.category-image img {
+
+    transform: scale(1.04);
+
+}
+
+
+.category-content {
+
+    padding: 22px;
+
+}
+
+
+.category-content h3 {
+
+    margin-bottom: 8px;
+
+    font-size: 1.25rem;
+
+    font-weight: 500;
+
+}
+
+
+.category-content span {
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+/* ==========================================
+   PRODUCTOS
+========================================== */
+
+.products-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
+}

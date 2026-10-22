@@ -1,0 +1,272 @@
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: transparent;
+
+    transition:
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+/* ==========================================
+   NAVBAR CUANDO HACE SCROLL
+========================================== */
+
+.navbar.navbar-scrolled {
+
+    background: #000000;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.20);
+
+}
+
+
+/* ==========================================
+   CONTENEDOR
+========================================== */
+
+.navbar-container {
+
+    width: min(
+        100% - 60px,
+        1500px
+    );
+
+    min-height: 80px;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.navbar-logo {
+
+    flex-shrink: 0;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    color: #ffffff;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   MENÚ
+========================================== */
+
+.navbar-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: clamp(
+        18px,
+        2.5vw,
+        40px
+    );
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.navbar-menu a {
+
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.06em;
+
+    transition: opacity 0.25s ease;
+}
+
+
+.navbar-menu a:hover {
+
+    opacity: 0.65;
+
+}
+
+
+/* ==========================================
+   ACCIONES
+========================================== */
+
+.navbar-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+
+.navbar-icon {
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 1.15rem;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.navbar-icon:hover {
+
+    opacity: 0.65;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ==========================================
+   BOTÓN HAMBURGUESA
+========================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ==========================================
+   ANIMACIÓN HAMBURGUESA
+========================================== */
+
+.menu-toggle.menu-open span:nth-child(1) {
+
+    transform:
+        translateY(7px)
+        rotate(45deg);
+
+}
+
+
+.menu-toggle.menu-open span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+
+.menu-toggle.menu-open span:nth-child(3) {
+
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+
+}
+
+
+/* ==========================================
+   MENÚ MÓVIL
+========================================== */
+
+.mobile-menu {
+
+    display: none;
+
+}
