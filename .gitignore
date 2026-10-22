@@ -1,0 +1,11 @@
+
+/backend/config/database.php
+.env
+.env.*
+!.env.example
+.vscode/
+*.log
+*.tmp
+*.sql
+node_modules/
+vendor/
